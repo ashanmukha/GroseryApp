@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="EcommerceGroseryApp.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:Pages="clr-namespace:EcommerceGroseryApp.Views"
+    xmlns:local="clr-namespace:EcommerceGroseryApp"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    Title="EcommerceGroseryApp"
+    Shell.BackgroundColor="{StaticResource Primary}"
+    Shell.FlyoutBehavior="Disabled"
+    xmlns:Helpers="clr-namespace:EcommerceGroseryApp.Helpers"
+    Shell.TabBarBackgroundColor="{StaticResource Mid}"
+    Shell.TabBarTitleColor="White"
+    Shell.TitleColor="White">
+    <Shell.Behaviors>
+        <toolkit:StatusBarBehavior StatusBarColor="{StaticResource Primary}" />
+    </Shell.Behaviors>
+    <!--<ShellContent
+        Title="FruitVegBhasket"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />-->
+    <TabBar>
+        <ShellContent
+            Title="Home"
+            ContentTemplate="{DataTemplate Pages:HomePage}"
+            Route="HomePage">
+            <ShellContent.Icon>
+                <FontImageSource FontFamily="FontIcon"
+                                 Glyph="{Static Helpers:FontIcon.Home}"/>
+            </ShellContent.Icon>
+        </ShellContent>
+        <ShellContent
+            Title="Categories"
+            ContentTemplate="{DataTemplate Pages:CategoriesPage}"
+            Route="CategoriesPage">
+            <ShellContent.Icon>
+                <FontImageSource FontFamily="FontIcon"
+                      Glyph="{Static Helpers:FontIcon.Grid}"/>
+            </ShellContent.Icon>
+        </ShellContent>
+        <ShellContent
+            Title="Orders"
+            ContentTemplate="{DataTemplate Pages:OrdersPage}"
+            Route="OrdersPage">
+            <ShellContent.Icon>
+                <FontImageSource FontFamily="FontIcon"
+                      Glyph="{Static Helpers:FontIcon.IosList}"/>
+            </ShellContent.Icon>
+        </ShellContent>
+        <ShellContent
+            Title="Help"
+            ContentTemplate="{DataTemplate Pages:HelpPage}"
+            Route="HelpPage">
+            <ShellContent.Icon>
+                <FontImageSource FontFamily="FontIcon"
+                      Glyph="{Static Helpers:FontIcon.IosHelp}"/>
+            </ShellContent.Icon>
+        </ShellContent>
+        <ShellContent
+            Title="Profile"
+            ContentTemplate="{DataTemplate Pages:ProfilePgae}"
+            Route="ProfilePgae">
+            <ShellContent.Icon>
+                <FontImageSource FontFamily="FontIcon"
+                      Glyph="{Static Helpers:FontIcon.IosContact}"/>
+            </ShellContent.Icon>
+        </ShellContent>
+    </TabBar>
+</Shell>
