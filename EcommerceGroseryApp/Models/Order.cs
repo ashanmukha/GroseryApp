@@ -13,7 +13,8 @@ namespace EcommerceGroseryApp.Models
         public IEnumerable<CurtItem> Items { get; set; } = Enumerable.Empty<CurtItem>();
         public DateTime Date { get; set; }= DateTime.Now;
         public decimal TotalAmount => Items.Sum(i => i.Amount);
-        public OrderStatus Status { get; set; }
+        public OrderStatus Status { get; set; } = OrderStatus.Placed;
+        public Color Color => _ordersStatusColors[Status];
         private static IReadOnlyDictionary<OrderStatus, Color> _ordersStatusColors = new Dictionary<OrderStatus, Color>
         {
             [OrderStatus.Placed] = Colors.Yellow,
