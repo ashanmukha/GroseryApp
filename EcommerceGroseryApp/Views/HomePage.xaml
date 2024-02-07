@@ -1,33 +1,45 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="EcommerceGroseryApp.Views.HomePage"
-             xmlns:dm="clr-namespace:MauiEx;assembly=MauiEx"
-             Title="HomePage">
+<ContentPage
+    x:Class="EcommerceGroseryApp.Views.HomePage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:dm="clr-namespace:MauiEx;assembly=MauiEx"
+    Title="HomePage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Simple Test using a static list of results, and filtering them dynamically based on input" HorizontalOptions="Start" />
-            <dm:AutoSuggestBox x:Name="SuggestBox1" 
-                           PlaceholderText="Enter a country"
-                           TextMemberPath="Name"
-                               WidthRequest="200"
-                               HorizontalOptions="Start"
-                            DisplayMemberPath="Name"
-                           TextChanged="SuggestBox_TextChanged" 
-                           QuerySubmitted="SuggestBox_QuerySubmitted" />
-            <Label Text="" x:Name="status" />
-            <dm:AutoSuggestBox x:Name="SuggestBox2" 
-                           TextColor="Green"
-                           PlaceholderText="Enter another country"
-                           TextChanged="SuggestBox_TextChanged"
-                           QuerySubmitted="SuggestBox_QuerySubmitted" />
-            <Button Text="Login"
-                    CornerRadius="10"
-                    Margin="10,20,10,20"
-                    TextColor="White"
-                    FontSize="16"
-                    Clicked="Button_Clicked"
-                    BackgroundColor="{StaticResource Primary}"/>
+            <Label HorizontalOptions="Start" Text="Simple Test using a static list of results, and filtering them dynamically based on input" />
+            <dm:AutoSuggestBox
+                x:Name="SuggestBox1"
+                DisplayMemberPath="Name"
+                HorizontalOptions="Start"
+                PlaceholderText="Enter a country"
+                QuerySubmitted="SuggestBox_QuerySubmitted"
+                TextChanged="SuggestBox_TextChanged"
+                TextMemberPath="Name"
+                WidthRequest="200" />
+            <Label x:Name="status" Text="" />
+            <dm:AutoSuggestBox
+                x:Name="SuggestBox2"
+                PlaceholderText="Enter another country"
+                QuerySubmitted="SuggestBox_QuerySubmitted"
+                TextChanged="SuggestBox_TextChanged"
+                TextColor="Green" />
+            <Button
+                Margin="10,20,10,20"
+                BackgroundColor="{StaticResource Primary}"
+                Clicked="Button_Clicked"
+                CornerRadius="10"
+                FontSize="16"
+                Text="Login"
+                TextColor="White" />
+            <Button
+                Margin="10,20,10,20"
+                BackgroundColor="{StaticResource Primary}"
+             
+                CornerRadius="10"
+                FontSize="16"
+                Text="Test"
+                TextColor="White" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
