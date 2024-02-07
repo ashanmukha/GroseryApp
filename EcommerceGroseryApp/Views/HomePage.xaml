@@ -21,7 +21,13 @@
                            PlaceholderText="Enter another country"
                            TextChanged="SuggestBox_TextChanged"
                            QuerySubmitted="SuggestBox_QuerySubmitted" />
-
+            <Button Text="Login"
+                    CornerRadius="10"
+                    Margin="10,20,10,20"
+                    TextColor="White"
+                    FontSize="16"
+                    Clicked="Button_Clicked"
+                    BackgroundColor="{StaticResource Primary}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

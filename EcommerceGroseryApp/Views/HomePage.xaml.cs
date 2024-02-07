@@ -1,6 +1,8 @@
 namespace EcommerceGroseryApp.Views;
 
+using EcommerceGroseryApp.Helpers;
 using EcommerceGroseryApp.Models;
+using EcommerceGroseryApp.Models.Enums;
 using MauiEx;
 using Microsoft.Maui.Controls;
 using System;
@@ -65,4 +67,8 @@ public partial class HomePage : ContentPage
             SuggestBox2.Unfocus();
     }
 
+    private void Button_Clicked(object sender, EventArgs e)
+    {
+        EventTracker.TrackEvent(EventName.LoginClicked);
+    }
 }
