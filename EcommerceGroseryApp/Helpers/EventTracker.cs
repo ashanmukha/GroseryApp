@@ -23,7 +23,7 @@ namespace EcommerceGroseryApp.Helpers
                 info.Add("Version", DeviceInfo.Version.ToString());
                 info.Add("Ptatform",DeviceInfo.Platform.ToString());
                 info.Add("AppVersion", VersionTracking.CurrentVersion.ToString());
-                info.Add("TimeOffAction", DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss"));
+                info.Add("TimeOffAction", DateTime.Now.ToString("dd/MM/yyyy hh:mm:ss"));
                 Analytics.TrackEvent(eventName, info);
             }
             catch(Exception ex)
