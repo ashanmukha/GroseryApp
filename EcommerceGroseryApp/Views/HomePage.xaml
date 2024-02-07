@@ -32,14 +32,6 @@
                 FontSize="16"
                 Text="Login"
                 TextColor="White" />
-            <Button
-                Margin="10,20,10,20"
-                BackgroundColor="{StaticResource Primary}"
-             
-                CornerRadius="10"
-                FontSize="16"
-                Text="Test"
-                TextColor="White" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
